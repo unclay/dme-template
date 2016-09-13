@@ -1,0 +1,30 @@
+{
+  "name": "dme-template",
+  "version": "1.0.0",
+  "description": "dme template by dme-cli",
+  "author": "unclay <wcl58981298@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unclay/dme-template.git"
+  },
+  "keywords": [
+    "es6",
+    "webpack",
+    "vue",
+    "less",
+    "umd",
+    "seajs",
+    "dme",
+    "template",
+    "cli"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unclay/dme-template/issues"
+  },
+  "homepage": "https://github.com/unclay/dme-template#readme"
+}
