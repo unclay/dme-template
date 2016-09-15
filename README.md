@@ -5,7 +5,7 @@
 
 # Usage
 
-This is a project template for (dem-cli)[https://github.com/unclay/dme-cli.git].
+This is a project template for [dem-cli](https://github.com/unclay/dme-cli.git).
 
 ``` bash
 # install dependencies
