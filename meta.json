@@ -1,4 +1,19 @@
 {
-  "name": "dme",
-  "description": "init dme project"
+  "prompts": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "message": "Project name"
+    },
+    "description": {
+      "type": "string",
+      "required": false,
+      "message": "Project description",
+      "default": "A dme-cli project"
+    },
+    "author": {
+      "type": "string",
+      "message": "Author"
+    }
+  }
 }
