@@ -17,7 +17,14 @@ const mutations = {
   }
 }
 
+const actions = {
+  addDemos ({ commit }, demo) {
+    commit('ADD_DEMOS', demo)
+  }
+}
+
 export default new Vuex.Store({
   state,
-  mutations
+  mutations,
+  actions
 })

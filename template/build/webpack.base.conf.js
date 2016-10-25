@@ -3,6 +3,7 @@ var projectRoot = path.resolve(__dirname, '../')
 var src = path.join(projectRoot, 'src')
 
 module.exports = {
+  devtool: 'eval',
   entry: {
     'app': './src/demos/main.js',
     'index': './src/index.js'
@@ -13,10 +14,11 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['', '.js', '.vue'],
+    extensions: ['', '.js', '.json', '.vue'],
     fallback: [path.join(__dirname, '../node_modules')],
     alias: {
-      'github-css': "github-markdown-css/github-markdown.css"
+      'github-css': 'github-markdown-css/github-markdown.css',
+      'vue': 'vue/dist/vue.js'
     }
   },
   module: {
@@ -24,6 +26,10 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue'
+      },
+      {
+        test: /\.md\?yaml$/,
+        loader: 'markdown'
       },
       {
         test: /\.md$/,
@@ -41,6 +47,10 @@ module.exports = {
       {
         test: /\.less$/,
         loader: 'style!css!postcss!less'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json'
       }
     ]
   },

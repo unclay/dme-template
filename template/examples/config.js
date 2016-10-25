@@ -1,6 +1,1 @@
-module.exports = [
-  {
-    filename: 'index',
-    name: '基本说明'
-  }
-]
+module.exports = ["index.md","test.md"]

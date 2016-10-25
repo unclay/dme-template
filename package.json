@@ -1,6 +1,6 @@
 {
   "name": "dme-template",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "dme template by dme-cli",
   "author": "unclay <wcl58981298@gmail.com>",
   "main": "index.js",

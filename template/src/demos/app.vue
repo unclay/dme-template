@@ -4,15 +4,15 @@
       <h1>DME</h1>
       <p class="aside-version">Version: {{ count }}</p>
       <ul class="aside-nav">
-        <li><a v-link="{ path: '/' }">DOC</a></li>
-        <li><a v-link="{ path: '/demo' }">DEMO</a></li>
-        <li><a v-link="{ path: '/history' }">HISTORY</a></li>
-        <li><a>TEST</a></li>
+        <li> <router-link :to="'/'">DOC</router-link> </li>
+        <li> <router-link :to="'/demo'">DEMO</router-link> </li>
+        <li> <router-link :to="'/history'">HISTORY</router-link> </li>
+        <li> <router-link :to="'/test'">TEST</router-link> </li>
       </ul>
       <p>Path: ({{ path }})</p>
       <ul v-if="path.substr(0, 5) === '/demo'">
         <li v-for="item of demos" >
-          <a v-link="{ path: item.path }">{{ item.name }}</a>
+          <router-link :to="item.path">{{ item.name }}</router-link>
         </li>
       </ul>
     </aside>
@@ -23,13 +23,20 @@
 </template>
 
 <script>
-  import store from '../vuex/store'
+  // import store from '../vuex/store'
+  import { version } from '../../package'
   export default {
-    store,
-    vuex: {
-      getters: {
-        path: state => state.path,
-        demos: state => state.demos
+    computed: {
+      path () {
+        return this.$store.state.path
+      },
+      demos () {
+        return this.$store.state.demos
+      }
+    },
+    data () {
+      return {
+        count: version
       }
     }
   }
@@ -62,6 +69,7 @@
       padding: 4%;
       width: 80%;
       z-index: 1;
+      overflow-y: scroll;
     }
   }
   .doc_container {

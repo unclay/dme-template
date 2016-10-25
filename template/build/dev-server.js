@@ -14,6 +14,8 @@ var argv = require('yargs').argv
 var host = argv.host || '0.0.0.0'
 var port = argv.port || 4000
 
+require('./examples-build').index()
+
 // handle fallback for HTML5 history API
 // app.use(require('connect-history-api-fallback')())
 
