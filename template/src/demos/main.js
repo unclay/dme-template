@@ -47,7 +47,6 @@ const routes = [
 
 import examples from './examples'
 for (let item of examples) {
-  console.log(item)
   if (item.filename) {
 
     let path = '/demo'
