@@ -59,7 +59,7 @@ for (let item of examples) {
       path,
       component: {
         template: `<div class="markdown-body">${item.content}</div>`,
-        ready: function () {
+        mounted: function () {
           let scripts = this.$el.querySelectorAll('.lang-javascript')
           for (let item of scripts) {
             eval(item.innerHTML)
