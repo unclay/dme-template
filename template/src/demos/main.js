@@ -40,7 +40,7 @@ const routes = [
   {
     path: '/test',
     component: {
-      template: `<div class="markdown-body">待定</div>`
+      template: `<div class="markdown-body">请用命令行进行单元测试，npm run test</div>`
     }
   }
 ]

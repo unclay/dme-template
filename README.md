@@ -14,6 +14,9 @@ npm install
 # serve with hot reload at localhost:4000
 npm run dev
 
+# unit testing (test/*.spec.js) (mocha + chai)
+npm run test
+
 # you can custom host and port
 npm run dev -- --host 0.0.0.0 --port 4000
 
