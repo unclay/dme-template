@@ -11,6 +11,9 @@ import history from '../../HISTORY.md'
 
 import pkg from '../../package.json'
 
+// tool: tools
+import tools from './tools'
+
 // load index.js
 import dme from '../'
 
@@ -60,9 +63,10 @@ for (let item of examples) {
       component: {
         template: `<div class="markdown-body">${item.content}</div>`,
         mounted: function () {
-          let scripts = this.$el.querySelectorAll('.lang-javascript')
-          for (let item of scripts) {
-            eval(item.innerHTML)
+          let content = item
+          // 加载demo脚本
+          for (let item of content.javascript) {
+            eval(tools.toJs(item))
           }
         }
       }

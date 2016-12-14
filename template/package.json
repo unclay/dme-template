@@ -12,6 +12,9 @@
     "build-prod-min": "webpack --config build/webpack.prod.conf.js --min",
     "build-doc": "webpack --config build/webpack.doc.conf.js"
   },
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
