@@ -88,4 +88,5 @@
       }
     }
   }
+  @import '../../examples/examples.less';
 </style>

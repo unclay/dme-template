@@ -10,7 +10,14 @@
 * use vue@2.0
 * demo use markdown
 
+
 1.1.1 / 2016-11-29
 ==================
 
 * add unit testing (mocha + chai)
+
+
+1.1.2 / 2016-12-15
+==================
+
+* examples add html、css and javascript

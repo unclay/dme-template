@@ -28,6 +28,15 @@ for (let item of config) {
       example.javascript.push(item.replace(/<code.*"lang-javascript".*>|<\/code>/gi, ''))
     }
   }
+
+  // 提取html
+  example.html = []
+  let html = md.match(/<code.*"lang-html".*>([^<]*)<\/code>/gi, '')
+  if (html) {
+    for (let item of html) {
+      example.html.push(item.replace(/<code.*"lang-html".*>|<\/code>/gi, ''))
+    }
+  }
   
   examples.push(example)
   // .md文档文件的预定格式必须是yaml格式

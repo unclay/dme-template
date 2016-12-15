@@ -8,4 +8,9 @@ order: 1
 ```javascript
 var dme = getScript()
 console.log(dme()) // 输出：hello world
+document.querySelector('#JS_result').innerHTML = dme()
+```
+
+```html
+<div id="JS_result"></div>
 ```

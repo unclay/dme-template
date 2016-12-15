@@ -6,7 +6,7 @@ describe('dme-template', function () {
     expect(dev).to.be.function;
   })
 
-  it('dev() result is "Hello world"', function () {
-    expect(dev()).to.be.equal('Hello world');
+  it('dev() result is "Hello World"', function () {
+    expect(dev()).to.be.equal('Hello World');
   })
 })

@@ -61,9 +61,25 @@ for (let item of examples) {
     routes.push({
       path,
       component: {
-        template: `<div class="markdown-body">${item.content}</div>`,
+        data () {
+          return {
+            content: item.content
+          }
+        },
+        template: '<div class="markdown-body examples-body" v-html="content"></div>',
         mounted: function () {
           let content = item
+          
+          // 加载demo的html
+          let code = document.querySelectorAll('.lang-html')
+          for (let i = 0; i < code.length; i++) {
+            let pre = code[i].parentNode
+            let div = document.createElement('div')
+            div.innerHTML = tools.toHtml(content.html[i])
+            pre.parentNode.insertBefore(div, pre)
+            pre.parentNode.removeChild(pre)
+          }
+
           // 加载demo脚本
           for (let item of content.javascript) {
             eval(tools.toJs(item))
