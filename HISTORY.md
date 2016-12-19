@@ -21,3 +21,9 @@
 ==================
 
 * examples add html、css and javascript
+
+
+1.1.3 / 2016-12-19
+==================
+
+* add unit testing in browser
