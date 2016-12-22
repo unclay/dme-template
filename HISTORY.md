@@ -27,3 +27,9 @@
 ==================
 
 * add unit testing in browser
+
+
+1.1.4 / 2016-12-22
+==================
+
+* fix for-of error in android
